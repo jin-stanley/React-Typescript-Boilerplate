@@ -4,6 +4,6 @@ import {shallow} from 'enzyme';
 import HelloWorld from './index';
 
 it('renders the heading', () => {
-    const result = shallow(<HelloWorld />).contains(<h1>Hello World</h1>);
+    const result = shallow(<HelloWorld />).contains(<h1>Welcome to use React-Typescript-Boilerplate</h1>);
     expect(result).toBeTruthy();
 });

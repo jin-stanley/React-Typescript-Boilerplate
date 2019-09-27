@@ -1,5 +1,5 @@
 import React from 'react';
-import * as github from 'Assets/img/github.png';
+import github from 'Assets/img/github.png';
 
 const HelloWorld: React.SFC = () => {
     return (

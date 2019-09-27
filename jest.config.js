@@ -9,5 +9,6 @@ module.exports = {
     setupFilesAfterEnv: ['<rootDir>/setupEnzyme.ts'],
     moduleNameMapper: {
         '^components(.*)$': '<rootDir>/src/components$1',
+        '.(css|jpg|png)$': '<rootDir>/empty-module.js',
     },
 };
