@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "lib": ["es6", "dom"],
+        "rootDir": "src",
+        "module": "commonjs",
+        "esModuleInterop": true, // ! here if you set to false, the import will become "import * as LibName from 'Lib';"
+        "target": "es5",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "src",
+        "paths": {
+            "@API/*": ["api/*"],
+            "@Assets/*": ["assets/*"],
+            "@Components/*": ["components/*"],
+            "@Containers/*": ["containers/*"],
+            "@Pages/*": ["pages/*"],
+            "@Theme/*": ["theme/*"]
+        }
+    },
+    "include": ["src", "setupEnzyme.ts"],
+    "exclude": ["node_modules", "build"]
+}

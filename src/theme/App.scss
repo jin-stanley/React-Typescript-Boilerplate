@@ -1,0 +1,33 @@
+.app-header {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0px;
+}
+
+.app-body {
+    padding: 0 30px;
+    font-size: 30px;
+}
+
+.app-body-todo {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: black 1px solid;
+}
+
+.app-body-todo-name {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.app-body-todo-control {
+    display: flex;
+    justify-content: flex-end;
+}
