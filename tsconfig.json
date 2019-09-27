@@ -15,12 +15,12 @@
         "allowSyntheticDefaultImports": true,
         "baseUrl": "src",
         "paths": {
-            "@API/*": ["api/*"],
-            "@Assets/*": ["assets/*"],
-            "@Components/*": ["components/*"],
-            "@Containers/*": ["containers/*"],
-            "@Pages/*": ["pages/*"],
-            "@Theme/*": ["theme/*"]
+            "API/*": ["api/*"],
+            "Assets/*": ["assets/*"],
+            "Components/*": ["components/*"],
+            "Containers/*": ["containers/*"],
+            "Pages/*": ["pages/*"],
+            "Theme/*": ["theme/*"]
         }
     },
     "include": ["src", "setupEnzyme.ts"],

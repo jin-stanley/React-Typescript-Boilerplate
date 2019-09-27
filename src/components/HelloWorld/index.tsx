@@ -1,9 +1,11 @@
 import React from 'react';
+import * as github from 'Assets/img/github.png';
 
 const HelloWorld = (): JSX.Element => {
     return (
-        <div>
-            <h1>Hello World</h1>
+        <div className="helloworld">
+            <img src={github} />
+            <h1>Welcome to use React-Typescript-Boilerplate</h1>
         </div>
     );
 };

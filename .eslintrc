@@ -20,6 +20,12 @@
         }
     },
     "rules": {
-        "allowTypedFunctionExpressions": true
+        "@typescript-eslint/explicit-function-return-type": [
+            "error",
+            {
+                "allowTypedFunctionExpressions": true
+            }
+        ],
+        "prefixWithI": "always"
     }
 }
