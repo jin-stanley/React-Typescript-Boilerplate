@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = () => {
+    const SRC = path.resolve(__dirname, 'src');
     const config = {
         entry: path.resolve(__dirname, 'src', 'index.tsx'),
         output: {
@@ -55,8 +56,11 @@ module.exports = () => {
                     use: [{loader: 'style-loader'}, {loader: 'css-loader'}],
                 },
                 {
-                    test: /\.[(png)|(obj)|(json)]$/,
-                    loader: 'file-loader',
+                    test: /\.(ttf|eot|svg|gif|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                    include: SRC,
+                    use: [{
+                        loader: 'file-loader'
+                    }]
                 },
             ],
         },
