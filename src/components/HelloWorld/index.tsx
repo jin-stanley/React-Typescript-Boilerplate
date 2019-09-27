@@ -1,7 +1,7 @@
 import React from 'react';
 import * as github from 'Assets/img/github.png';
 
-const HelloWorld = (): JSX.Element => {
+const HelloWorld: React.SFC = () => {
     return (
         <div className="helloworld">
             <img src={github} />
