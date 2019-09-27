@@ -1,6 +1,6 @@
 {
-  "name": "react-typescript-project-boilerplate",
-  "version": "1.0.0",
+  "name": "react-typescript-boilerplate",
+  "version": "0.1.1",
   "main": "index.js",
   "author": "Stanley.Jin",
   "license": "MIT",
