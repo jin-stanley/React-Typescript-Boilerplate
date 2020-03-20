@@ -1,31 +1,36 @@
 {
     "parser": "@typescript-eslint/parser",
-    "extends": ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint", "plugin:prettier/recommended"],
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
+    ],
     "plugins": ["@typescript-eslint"],
     "env": {
-        "browser": true,
-        "node": true
+      "browser": true,
+      "node": true
     },
     "settings": {
-        "react": {
-            "pragma": "React",
-            "version": "detect"
-        }
+      "react": {
+        "pragma": "React",
+        "version": "detect"
+      }
     },
     "parserOptions": {
-        "ecmaVersion": 2019,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
-        }
+      "ecmaVersion": 2019,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
     },
     "rules": {
-        "@typescript-eslint/explicit-function-return-type": [
-            "error",
-            {
-                "allowTypedFunctionExpressions": true
-            }
-        ],
-        "prefixWithI": "always"
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-use-before-define": "off",
+      "@typescript-eslint/camelcase": "off",
+      "prefixWithI": 0
     }
-}
+  }
+  

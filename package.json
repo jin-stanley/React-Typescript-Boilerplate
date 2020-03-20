@@ -5,17 +5,43 @@
   "author": "Stanley.Jin",
   "license": "MIT",
   "private": true,
+  "homepage": ".",
   "dependencies": {
+    "@apollo/react-hooks": "^3.1.3",
+    "@material-ui/core": "^4.9.1",
     "@types/react": "^16.9.3",
     "@types/react-dom": "^16.9.1",
+    "apollo-boost": "^0.4.4",
+    "array-move": "^2.2.0",
+    "axios": "^0.19.1",
+    "dotenv": "^8.2.0",
+    "faker": "^4.1.0",
+    "fuzzaldrin-plus": "^0.6.0",
+    "graphql": "^14.5.8",
+    "html-react-parser": "^0.9.1",
+    "i18next": "^19.0.0",
+    "lodash": "^4.17.15",
+    "nodemon": "^1.19.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-ga": "^2.7.0",
+    "react-gtm-module": "^2.0.8",
+    "react-i18next": "^11.0.1",
+    "react-rnd": "^10.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-sortable-hoc": "^1.10.1",
     "typescript": "^3.6.3"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "node_modules/react/",
+      "node_modules/enzyme/"
+    ]
   },
   "lint-staged": {
     "*.{.ts,.tsx}": [
@@ -25,24 +51,32 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --env.NODE_ENV=local --hot --inline --mode development",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --mode development --open --hot --host:0.0.0.0",
     "build": "webpack --mode production",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
     "eject": "react-scripts eject",
-    "lint": "eslint src --fix --ext .ts,.tsx "
+    "lint": "eslint src --fix --ext .ts,.tsx",
+    "storybook": "start-storybook -p 9001"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
+    "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.6.0",
+    "@storybook/addon-storysource": "^5.2.4",
+    "@storybook/react": "^5.2.1",
+    "@svgr/webpack": "^5.1.0",
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.144",
     "@typescript-eslint/eslint-plugin": "^2.3.1",
     "@typescript-eslint/parser": "^2.3.1",
+    "apollo-server": "^2.9.7",
     "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
     "css-loader": "^3.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -54,9 +88,14 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
+    "node-sass": "^4.12.0",
+    "notarealdb": "^0.2.2",
     "prettier": "^1.18.2",
+    "react-inlinesvg": "^1.1.7",
+    "sass-loader": "^8.0.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.0.0",
+    "svg-inline-loader": "^0.8.0",
     "ts-jest": "^24.1.0",
     "ts-loader": "^6.1.2",
     "webpack": "^4.41.0",

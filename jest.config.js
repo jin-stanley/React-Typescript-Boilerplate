@@ -1,14 +1,20 @@
 module.exports = {
     roots: ['<rootDir>/src'],
     transform: {
-        '^.+\\.tsx?$': 'ts-jest',
+      '^.+\\.tsx?$': 'ts-jest',
+      '^.+\\.svg$': '<rootDir>/jest/jestSvgTransform.js',
     },
-    testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
+    testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx|js)?$',
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     snapshotSerializers: ['enzyme-to-json/serializer'],
     setupFilesAfterEnv: ['<rootDir>/setupEnzyme.ts'],
     moduleNameMapper: {
-        '^components(.*)$': '<rootDir>/src/components$1',
-        '.(css|jpg|png)$': '<rootDir>/empty-module.js',
+      '^Theme(.*)$': '<rootDir>/src/theme$1',
+      '^Assets(.*)$': '<rootDir>/src/assets$1',
+      '^Mocks(.*)$': '<rootDir>/src/mocks$1',
+      '^components(.*)$': '<rootDir>/src/components$1',
+      '.(css|jpg|png)$': '<rootDir>/jest/empty-module.js',
+      '.svg$': 'svg-inline-loader',
     },
-};
+  }
+  
